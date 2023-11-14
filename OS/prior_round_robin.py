@@ -9,7 +9,8 @@ def priority_round_robin_schedule_from_file(file_path, time_quantum):
             burst_time = int(parts[2])
             priority = int(parts[3])
             tasks.append([process, arrival_time, burst_time, priority])
-            
+    
+
     tasks.sort(key=lambda x: (x[1], -x[3]))  # Sort by arrival time and priority (higher priority first)
 
     return tasks, time_quantum
