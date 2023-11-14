@@ -35,7 +35,7 @@ def calculate_metrics_sjf(schedule):
     return waiting_times, turnaround_times, response_times, average_waiting_time, average_turnaround_time, average_response_time
 
 # Example usage for SJF:
-file_path_sjf = "sjf.txt"  # Replace with the actual path to your SJF input file
+file_path_sjf = "sjf_non_pre.txt"  # Replace with the actual path to your SJF input file
 schedule_sjf = sjf_schedule_from_file(file_path_sjf)
 print("SJF Schedule from file:", [task[0] for task in schedule_sjf])
 
